@@ -1,0 +1,94 @@
+/**
+ * =========================================================
+ * DONGENG DIENG
+ * BASE
+ * =========================================================
+ */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+
+  color: var(--color-text);
+  background: var(--color-bg);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text);
+
+  line-height: var(--line-height-tight);
+
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, var(--font-size-5xl));
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, var(--font-size-4xl));
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  color: var(--color-text-soft);
+}
+
+a {
+  transition:
+    color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+body.menu-open {
+  overflow: hidden;
+}

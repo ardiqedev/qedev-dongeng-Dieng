@@ -1,0 +1,743 @@
+/**
+ * =========================================================
+ * DONGENG DIENG
+ * COMPONENTS
+ * =========================================================
+ */
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-2);
+
+  min-height: 46px;
+
+  padding-inline: var(--space-5);
+
+  border-radius: var(--radius-full);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-fast),
+    box-shadow var(--transition-normal);
+}
+
+.btn-primary {
+  color: var(--color-white);
+
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+
+  background: transparent;
+
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  color: var(--color-white);
+
+  background: var(--color-primary);
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.image-cover {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: var(--space-1) var(--space-3);
+
+  border-radius: var(--radius-full);
+
+  font-size: var(--font-size-xs);
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+
+  background: var(--color-bg-soft);
+
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--space-2);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: 600;
+}
+
+.text-link:hover {
+  color: var(--color-accent);
+}
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
+.site-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: var(--z-header);
+
+  color: var(--color-primary-dark);
+
+  background: rgba(247, 244, 238, 0.96);
+
+  box-shadow: 0 1px 0 rgba(30, 35, 30, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    box-shadow var(--transition-normal),
+    backdrop-filter var(--transition-normal);
+}
+
+/* =========================================================
+   SCROLLED STATE
+========================================================= */
+
+.site-header.is-scrolled {
+  color: var(--color-text);
+
+  background: rgba(247, 244, 238, 0.94);
+
+  box-shadow: 0 1px 0 rgba(30, 35, 30, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.site-header-inner {
+  width: 100%;
+
+  max-width: var(--container-2xl);
+
+  min-height: 72px;
+
+  margin-inline: auto;
+
+  padding-inline: var(--page-padding);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--space-6);
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  flex-shrink: 0;
+
+  color: inherit;
+
+  opacity: 1;
+}
+
+.site-logo:hover {
+  opacity: 1;
+}
+
+.site-logo-main {
+  font-size: 0.9rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  line-height: 1;
+}
+
+.site-logo-tagline {
+  display: none;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.02em;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.site-nav {
+  display: none;
+
+  align-items: center;
+
+  gap: var(--space-6);
+}
+
+.site-nav a {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 44px;
+
+  color: inherit;
+
+  font-size: var(--font-size-sm);
+
+  font-weight: 500;
+
+  opacity: 0.9;
+}
+
+.site-nav a:not(.site-nav-cta)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 5px;
+
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform var(--transition-normal);
+}
+
+.site-nav a:not(.site-nav-cta):hover::after {
+  transform: scaleX(1);
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+.site-nav-cta {
+  min-height: 40px !important;
+
+  padding-inline: var(--space-4);
+
+  border-radius: var(--radius-full);
+
+  color: var(--color-white) !important;
+
+  background: var(--color-primary);
+
+  opacity: 1 !important;
+}
+
+.site-header.is-scrolled .site-nav-cta {
+  color: var(--color-white) !important;
+}
+
+/* =========================================================
+   MOBILE MENU TOGGLE
+========================================================= */
+
+.mobile-menu-toggle {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: inherit;
+
+  border-radius: var(--radius-full);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+
+  width: 21px;
+  height: 1.5px;
+
+  background: currentColor;
+
+  transition:
+    transform var(--transition-normal),
+    opacity var(--transition-normal);
+}
+
+/* =========================================================
+   MOBILE MENU ACTIVE
+========================================================= */
+
+.mobile-menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.mobile-menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-nav {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: calc(var(--z-header) - 1);
+
+  padding-top: 72px;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  background: rgba(247, 244, 238, 0.98);
+
+  transform: translateY(-10px);
+
+  transition:
+    opacity var(--transition-normal),
+    transform var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+.mobile-nav.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.mobile-nav-inner {
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: var(--space-8) var(--page-padding) var(--space-6);
+}
+
+.mobile-nav-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-2);
+}
+
+.mobile-nav-links a {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 54px;
+
+  padding-inline: var(--space-4);
+
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-primary-dark);
+
+  font-family: var(--font-display);
+
+  font-size: var(--font-size-xl);
+
+  font-weight: 600;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--color-accent);
+
+  opacity: 1;
+}
+
+.mobile-nav-links .mobile-nav-package {
+  margin-top: var(--space-4);
+
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: var(--radius-full);
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  font-family: var(--font-body);
+
+  font-size: var(--font-size-sm);
+}
+
+.mobile-nav-footer {
+  padding-top: var(--space-6);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+}
+
+/* =========================================================
+   HEADER OVERLAY
+   Digunakan saat HEADER berada di atas HERO
+========================================================= */
+
+.site-header.is-overlay {
+  color: var(--color-white);
+
+  background: transparent;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+}
+
+/* =========================================================
+   OVERLAY — LOGO
+========================================================= */
+
+.site-header.is-overlay .site-logo {
+  color: var(--color-white);
+}
+
+/* =========================================================
+   OVERLAY — LOGO MAIN
+========================================================= */
+
+.site-header.is-overlay .site-logo-main {
+  color: var(--color-white);
+}
+
+/* =========================================================
+   OVERLAY — LOGO TAGLINE
+========================================================= */
+
+.site-header.is-overlay .site-logo-tagline {
+  color: var(--color-white);
+
+  opacity: 0.72;
+}
+
+/* =========================================================
+   OVERLAY — DESKTOP NAV
+========================================================= */
+
+.site-header.is-overlay .site-nav a {
+  color: var(--color-white);
+}
+
+/* =========================================================
+   OVERLAY — PACKAGE CTA
+========================================================= */
+
+.site-header.is-overlay .site-nav-cta {
+  color: var(--color-white) !important;
+
+  background: var(--color-primary);
+
+  opacity: 1 !important;
+}
+
+/* =========================================================
+   OVERLAY — MOBILE TOGGLE
+========================================================= */
+
+.site-header.is-overlay .mobile-menu-toggle {
+  color: var(--color-white);
+}
+
+/* =========================================================
+   OVERLAY + SCROLLED
+========================================================= */
+
+.site-header.is-overlay.is-scrolled {
+  color: var(--color-text);
+
+  background: rgba(247, 244, 238, 0.94);
+
+  box-shadow: 0 1px 0 rgba(30, 35, 30, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   OVERLAY + SCROLLED — LOGO
+========================================================= */
+
+.site-header.is-overlay.is-scrolled .site-logo {
+  color: var(--color-primary-dark);
+}
+
+.site-header.is-overlay.is-scrolled .site-logo-main {
+  color: var(--color-primary-dark);
+}
+
+.site-header.is-overlay.is-scrolled .site-logo-tagline {
+  color: var(--color-text-muted);
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   OVERLAY + SCROLLED — NAV
+========================================================= */
+
+.site-header.is-overlay.is-scrolled .site-nav a {
+  color: var(--color-text);
+}
+
+/* =========================================================
+   OVERLAY + SCROLLED — PACKAGE CTA
+========================================================= */
+
+.site-header.is-overlay.is-scrolled .site-nav-cta {
+  color: var(--color-white) !important;
+
+  background: var(--color-primary);
+}
+
+/* =========================================================
+   OVERLAY + SCROLLED — MOBILE TOGGLE
+========================================================= */
+
+.site-header.is-overlay.is-scrolled .mobile-menu-toggle {
+  color: var(--color-primary-dark);
+}
+
+/* =========================================
+   FLOATING WHATSAPP — DONGENG DIENG
+========================================= */
+
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 56px;
+  padding: 0 20px;
+
+  background: #243f34;
+  color: #fffefa;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+
+  box-shadow: 0 8px 26px rgba(25, 48, 38, 0.25);
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.floating-whatsapp:hover {
+  background: #315442;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(25, 48, 38, 0.3);
+}
+
+/* ICON WHATSAPP BIRU */
+.floating-whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 38px;
+
+  color: #168de2;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.floating-whatsapp-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.floating-whatsapp-text {
+  color: #fffefa;
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #c7793b;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 18px;
+
+    width: 56px;
+    height: 56px;
+    min-height: 56px;
+    padding: 0;
+
+    border-radius: 50%;
+    gap: 0;
+  }
+
+  .floating-whatsapp-icon {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .floating-whatsapp-text {
+    display: none;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp {
+    transition: none;
+  }
+}
+
+/* ICON WHATSAPP HIJAU */
+.floating-whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 28px;
+
+  color: #25d366;
+  background: transparent;
+  border-radius: 0;
+}
+
+.floating-whatsapp-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}

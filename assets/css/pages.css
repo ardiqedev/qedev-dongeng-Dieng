@@ -1,0 +1,96 @@
+/**
+ * =========================================================
+ * DONGENG DIENG
+ * PAGES
+ * =========================================================
+ */
+
+.page-placeholder {
+  width: 100%;
+
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: var(--space-5);
+
+  max-width: var(--container-xl);
+
+  margin-inline: auto;
+
+  padding: var(--space-16) var(--page-padding);
+}
+
+.page-placeholder > p:first-child {
+  color: var(--color-accent);
+
+  font-size: var(--font-size-xs);
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.page-placeholder h1 {
+  max-width: 800px;
+
+  color: var(--color-primary-dark);
+}
+
+.page-placeholder p {
+  max-width: 620px;
+}
+
+.page-placeholder nav {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: var(--space-3);
+
+  margin-top: var(--space-3);
+}
+
+.page-placeholder nav a,
+.page-placeholder > a {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  min-height: 44px;
+
+  padding: 0 var(--space-5);
+
+  border-radius: var(--radius-full);
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: 600;
+
+  transition:
+    background var(--transition-normal),
+    transform var(--transition-fast);
+}
+
+.page-placeholder nav a:hover,
+.page-placeholder > a:hover {
+  color: var(--color-white);
+
+  background: var(--color-primary-dark);
+
+  opacity: 1;
+
+  transform: translateY(-1px);
+}

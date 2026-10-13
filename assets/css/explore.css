@@ -1,0 +1,451 @@
+/**
+ * =========================================================
+ * DONGENG DIENG
+ * EXPLORE SECTION
+ * =========================================================
+ */
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.explore-section {
+  position: relative;
+
+  padding-block: var(--space-16) var(--space-16);
+
+  background: var(--color-bg);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.explore-header {
+  max-width: 720px;
+
+  margin-bottom: var(--space-10);
+}
+
+.explore-header .section-eyebrow {
+  display: block;
+
+  margin-bottom: var(--space-3);
+
+  color: var(--color-accent);
+
+  font-size: var(--font-size-xs);
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.explore-header .section-title {
+  max-width: 620px;
+
+  margin-bottom: var(--space-4);
+
+  color: var(--color-primary-dark);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 6vw, 3.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+.explore-header .section-description {
+  max-width: 560px;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-base);
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   EXPLORE GRID
+========================================================= */
+
+.explore-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: var(--space-4);
+}
+
+/* =========================================================
+   EXPLORE CARD
+========================================================= */
+
+.explore-card {
+  position: relative;
+
+  display: block;
+
+  min-height: 320px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+
+  color: var(--color-white);
+
+  background: var(--color-primary-dark);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.explore-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+  overflow: hidden;
+}
+
+.explore-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   CARD OVERLAY
+========================================================= */
+
+.explore-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.18) 35%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.explore-card-content {
+  min-height: 320px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: var(--space-6);
+}
+
+.explore-card-label {
+  display: inline-flex;
+
+  width: fit-content;
+
+  margin-bottom: var(--space-3);
+
+  font-size: var(--font-size-xs);
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  opacity: 0.88;
+}
+
+.explore-card-title {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.45rem, 4vw, 2.3rem);
+
+  font-weight: 600;
+
+  line-height: 1.08;
+}
+
+.explore-card-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--space-2);
+
+  width: fit-content;
+
+  margin-top: var(--space-5);
+
+  color: var(--color-white);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: 600;
+
+  opacity: 0.9;
+
+  transition:
+    gap var(--transition-normal),
+    opacity var(--transition-normal);
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.explore-card:hover .explore-card-image img {
+  transform: scale(1.045);
+}
+
+.explore-card:hover .explore-card-link {
+  gap: var(--space-3);
+
+  opacity: 1;
+}
+
+/* =========================================================
+   DESTINATION — FEATURED
+========================================================= */
+
+.explore-card-destination {
+  min-height: 430px;
+}
+
+.explore-card-destination .explore-card-content {
+  min-height: 430px;
+}
+
+.explore-card-destination .explore-card-title {
+  max-width: 580px;
+
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+/* =========================================================
+   SUPPORTING CARDS
+========================================================= */
+
+.explore-card-story,
+.explore-card-culinary {
+  min-height: 280px;
+}
+
+.explore-card-story .explore-card-content,
+.explore-card-culinary .explore-card-content {
+  min-height: 280px;
+}
+
+.explore-card-story .explore-card-title,
+.explore-card-culinary .explore-card-title {
+  font-size: clamp(1.35rem, 3.5vw, 2rem);
+}
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.explore-card-experience {
+  min-height: 320px;
+}
+
+.explore-card-experience .explore-card-content {
+  min-height: 320px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 640px) {
+  .explore-section {
+    padding-block: var(--space-20) var(--space-20);
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-5);
+  }
+
+  .explore-card-destination {
+    grid-column: 1 / -1;
+
+    min-height: 460px;
+  }
+
+  .explore-card-destination .explore-card-content {
+    min-height: 460px;
+  }
+
+  .explore-card-experience {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1024px) {
+  .explore-section {
+    padding-block: var(--space-24) var(--space-24);
+  }
+
+  .explore-header {
+    margin-bottom: var(--space-12);
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    grid-template-rows:
+      300px
+      300px
+      260px;
+
+    gap: var(--space-5);
+  }
+
+  /* ================================================
+     DESTINATION
+  ================================================= */
+
+  .explore-card-destination {
+    grid-column: 1 / span 7;
+
+    grid-row: 1 / span 2;
+
+    min-height: auto;
+  }
+
+  .explore-card-destination .explore-card-content {
+    min-height: auto;
+
+    height: 100%;
+
+    padding: var(--space-8);
+  }
+
+  .explore-card-destination .explore-card-title {
+    max-width: 540px;
+
+    font-size: clamp(2rem, 3.2vw, 3.2rem);
+  }
+
+  /* ================================================
+     CERITA
+  ================================================= */
+
+  .explore-card-story {
+    grid-column: 8 / span 5;
+
+    grid-row: 1;
+
+    min-height: auto;
+  }
+
+  .explore-card-story .explore-card-content {
+    min-height: auto;
+
+    height: 100%;
+
+    padding: var(--space-6);
+  }
+
+  /* ================================================
+     KULINER
+  ================================================= */
+
+  .explore-card-culinary {
+    grid-column: 8 / span 5;
+
+    grid-row: 2;
+
+    min-height: auto;
+  }
+
+  .explore-card-culinary .explore-card-content {
+    min-height: auto;
+
+    height: 100%;
+
+    padding: var(--space-6);
+  }
+
+  /* ================================================
+     PENGALAMAN
+  ================================================= */
+
+  .explore-card-experience {
+    grid-column: 1 / -1;
+
+    grid-row: 3;
+
+    min-height: auto;
+  }
+
+  .explore-card-experience .explore-card-content {
+    min-height: auto;
+
+    height: 100%;
+
+    padding: var(--space-8);
+  }
+
+  .explore-card-experience .explore-card-title {
+    max-width: 700px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+  .explore-grid {
+    grid-template-rows:
+      330px
+      330px
+      280px;
+  }
+
+  .explore-card-destination .explore-card-content {
+    padding: var(--space-10);
+  }
+
+  .explore-card-experience .explore-card-content {
+    padding: var(--space-10);
+  }
+}

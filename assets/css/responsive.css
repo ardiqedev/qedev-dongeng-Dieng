@@ -1,0 +1,90 @@
+/**
+ * =========================================================
+ * DONGENG DIENG
+ * RESPONSIVE
+ * =========================================================
+ */
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 640px) {
+  :root {
+    --page-padding: 2rem;
+  }
+
+  .section {
+    padding-block: var(--space-20);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+
+  .page-placeholder {
+    padding-inline: var(--page-padding);
+  }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1024px) {
+  :root {
+    --page-padding: 2.5rem;
+  }
+
+  .section {
+    padding-block: var(--space-24);
+  }
+
+  .section-header {
+    flex-direction: row;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+  }
+
+  .page-placeholder {
+    min-height: 75vh;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1280px) {
+  :root {
+    --page-padding: 3rem;
+  }
+}
+
+/* =========================================================
+   HEADER — DESKTOP
+========================================================= */
+
+@media (min-width: 900px) {
+  .site-header-inner {
+    min-height: 82px;
+  }
+
+  .site-nav {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .site-logo-tagline {
+    display: block;
+  }
+}
