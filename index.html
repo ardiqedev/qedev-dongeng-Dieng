@@ -72,6 +72,36 @@
       <footer id="site-footer"></footer>
     </div>
 
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const savedRoute = params.get("p");
+
+        if (!savedRoute) return;
+
+        const basePath = "/qedev-dongeng-Dieng";
+        const routeUrl = new URL(savedRoute, window.location.origin);
+
+        // Pastikan hanya route internal yang dipulihkan
+        if (
+          routeUrl.origin !== window.location.origin ||
+          !savedRoute.startsWith("/")
+        ) {
+          return;
+        }
+
+        const targetPath =
+          basePath +
+          (routeUrl.pathname.startsWith("/") ? routeUrl.pathname : "/");
+
+        history.replaceState(
+          {},
+          "",
+          targetPath + routeUrl.search + routeUrl.hash,
+        );
+      })();
+    </script>
+
     <!-- =====================================================
          APPLICATION ENTRY
     ====================================================== -->
