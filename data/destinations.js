@@ -3,6 +3,8 @@
    DESTINATIONS DATA
 ========================================= */
 
+import CONFIG from "../assets/js/config.js";
+
 const DestinationsData = [
   /* =====================================
      01. BUKIT SIKUNIR
@@ -16,13 +18,13 @@ const DestinationsData = [
     category: "Sunrise",
     location: "Dieng, Jawa Tengah",
 
-    image: "/assets/images/destinations/destination-sikunir.jpg",
+    image: CONFIG.asset("assets/images/destinations/destination-sikunir.jpg"),
 
-    storyImage: "/assets/images/destinations/sikunir-hero.jpg",
+    storyImage: CONFIG.asset("assets/images/destinations/sikunir-hero.jpg"),
 
     galleryImages: [
-      "/assets/images/destinations/sikunir-gallery-1.jpg",
-      "/assets/images/destinations/sikunir-gallery-2.jpg",
+      CONFIG.asset("assets/images/destinations/sikunir-gallery-1.jpg"),
+      CONFIG.asset("assets/images/destinations/sikunir-gallery-2.jpg"),
     ],
 
     alt: "Pemandangan sunrise dari Bukit Sikunir Dieng",
@@ -34,6 +36,7 @@ const DestinationsData = [
   /* =====================================
      02. TELAGA WARNA
   ===================================== */
+
   {
     id: "telaga-warna",
     name: "Telaga Warna",
@@ -42,20 +45,20 @@ const DestinationsData = [
     category: "Nature",
     location: "Dieng, Jawa Tengah",
 
-    image: "/assets/images/destinations/destination-telaga-warna.jpg",
+    image: CONFIG.asset(
+      "assets/images/destinations/destination-telaga-warna.jpg",
+    ),
 
     alt: "Pemandangan Telaga Warna Dieng",
-
     excerpt: "Warna air, kabut, dan cerita di baliknya.",
-
     featured: false,
-
     cardClass: "destination-card-telaga",
   },
 
   /* =====================================
      03. KAWAH SIKIDANG
   ===================================== */
+
   {
     id: "kawah-sikidang",
     name: "Kawah Sikidang",
@@ -64,20 +67,20 @@ const DestinationsData = [
     category: "Geologi",
     location: "Dieng, Jawa Tengah",
 
-    image: "/assets/images/destinations/destination-kawah-sikidang.jpg",
+    image: CONFIG.asset(
+      "assets/images/destinations/destination-kawah-sikidang.jpg",
+    ),
 
     alt: "Pemandangan Kawah Sikidang Dieng",
-
     excerpt: "Menyaksikan bumi Dieng dari dekat.",
-
     featured: false,
-
     cardClass: "destination-card-sikidang",
   },
 
   /* =====================================
      04. CANDI ARJUNA
   ===================================== */
+
   {
     id: "candi-arjuna",
     name: "Candi Arjuna",
@@ -86,14 +89,13 @@ const DestinationsData = [
     category: "Sejarah",
     location: "Dieng, Jawa Tengah",
 
-    image: "/assets/images/destinations/destination-candi-arjuna.jpg",
+    image: CONFIG.asset(
+      "assets/images/destinations/destination-candi-arjuna.jpg",
+    ),
 
     alt: "Kompleks Candi Arjuna di dataran tinggi Dieng",
-
     excerpt: "Jejak sejarah di tengah dataran tinggi.",
-
     featured: false,
-
     cardClass: "destination-card-arjuna",
   },
 ];
