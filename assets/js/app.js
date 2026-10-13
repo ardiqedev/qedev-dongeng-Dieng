@@ -84,11 +84,7 @@ const App = {
       ),
     );
 
-    Router.register("/paket-wisata", () => this.renderJeepPackages());
-    // =========================================
-    // PAKET JEEP DIENG
-    // =========================================
-
+    // Paket Jeep Dieng
     Router.register("/paket-jeep", () => this.renderJeepPackages());
 
     Router.register("/tentang", () =>
