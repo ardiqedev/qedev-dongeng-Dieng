@@ -57,15 +57,24 @@ const Router = {
   },
 
   /* =====================================================
-       NAVIGATE
-    ===================================================== */
+     NAVIGATE
+===================================================== */
 
   navigate(path) {
     if (!path) {
       return;
     }
 
-    window.history.pushState({}, "", path);
+    const basePath = "/qedev-dongeng-Dieng";
+
+    // Pertahankan path deployment GitHub Pages
+    let targetPath = path;
+
+    if (path.startsWith("/") && !path.startsWith(`${basePath}/`)) {
+      targetPath = `${basePath}${path === "/" ? "/" : path}`;
+    }
+
+    window.history.pushState({}, "", targetPath);
 
     this.resolve();
   },
